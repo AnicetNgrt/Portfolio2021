@@ -1,0 +1,27 @@
+.code-resume {
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 0.2rem;
+    background-color: var(--brightest-color);
+    color: var(--bright-color-chill);
+    border: dashed 1px var(--bright-color-chill);
+    grid-area: codeResume;
+}
+
+@media (max-aspect-ratio: 15/10) {
+    .code-resume {
+        font-size: 0.65rem;
+    }
+}
+
+@media (max-aspect-ratio: 11/10) {
+    .code-resume {
+        font-size: 1rem;
+    }
+}
+
+@media (max-aspect-ratio: 10/10) {
+    .code-resume {
+        font-size: 0.65rem;
+    }
+}

@@ -1,0 +1,6 @@
+.footer {
+    height: 5rem;
+    margin-top: 5rem;
+    grid-area: footer;
+    color: var(--bright-color-chill);
+}

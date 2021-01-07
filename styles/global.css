@@ -1,0 +1,104 @@
+:root {
+  --darkest-color: #1a1616;
+  --dark-color-chill: #4f186b;
+  --dark-color-hot: #91144e;
+  --dark-color-emphasis: #ad6d37;
+  
+  --bright-color-chill: #3e4db4;
+  --bright-color-hot: #ea1f25;
+  --bright-color-emphasis: #f1ca00;
+  --brightest-color: #e4f1f5;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  transition: background-color, color 0.2s;
+  font-family: 'Quicksand', 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica',
+    'Arial', sans-serif;
+  margin: 0;
+  background-color: var(--brightest-color);
+  color: var(--darkest-color);
+}
+
+body.dark {
+  transition: all 0.2s;
+  background-color: var(--darkest-color);
+  color: var(--bright-color-chill);
+}
+
+.page-container {
+  display: grid;
+  overflow-x: hidden;
+  grid-template-columns: 25vw 25vw 25vw 25vw;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "header header header header"
+    ". center center ."
+    "footer footer footer footer";
+}
+
+.code-font {
+  font-family: 'Nova Mono', monospace;
+}
+
+p {
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 auto;
+  font-weight: 700;
+  color: var(--bright-color-chill);
+}
+
+h1.dark, h2.dark, h3.dark, h4.dark, h5.dark, h6.dark {
+  color: var(--dark-color-chill);
+}
+
+h1 {
+  text-align: center;
+  font-size: 4.5rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.flex-align-items-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-height: 500px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  .page-container {
+    display: grid;
+    grid-template-columns: 10% auto auto 10%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "header header header header"
+      ". center center ."
+      "footer footer footer footer";
+  }
+}
+
+@media (max-aspect-ratio: 11/10) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  .page-container {
+    display: grid;
+    grid-template-columns: 20px auto auto 20px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "header header header header"
+      ". center center ."
+      "footer footer footer footer";
+  }
+}
