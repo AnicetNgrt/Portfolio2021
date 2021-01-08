@@ -1,27 +1,37 @@
 .code-resume {
     margin: 1rem;
     padding: 1rem;
-    border-radius: 0.2rem;
-    background-color: var(--brightest-color);
+    font-size: 1.2rem;
+    max-width: 100%;
+    border-radius: 3rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: -1rem 1rem 5rem var(--bright-color-chill), 1rem 1rem 5rem var(--bright-color-chill);
     color: var(--bright-color-chill);
-    border: dashed 1px var(--bright-color-chill);
+    border: solid 0.1rem var(--bright-color-chill);
+
     grid-area: codeResume;
 }
 
 @media (max-aspect-ratio: 15/10) {
     .code-resume {
-        font-size: 0.65rem;
+        font-size: 1rem;
     }
 }
 
 @media (max-aspect-ratio: 11/10) {
     .code-resume {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 }
 
 @media (max-aspect-ratio: 10/10) {
     .code-resume {
-        font-size: 0.65rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-aspect-ratio: 8/10) {
+    .code-resume {
+        font-size: 0.6rem;
     }
 }
